@@ -30,5 +30,5 @@
 
 - name: Ensure Docker Community Edition is installed | RedHat
   package:
-    name: 'docker-ce'
+    name: '{{ docker_package | default("docker-ce") }}'
     state: present

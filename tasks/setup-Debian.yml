@@ -44,5 +44,5 @@
 
 - name: Ensure Docker Community Edition is installed | Debian / Ubuntu
   apt:
-    name: 'docker-ce'
+    name: '{{ docker_package | default("docker-ce") }}'
     state: present
